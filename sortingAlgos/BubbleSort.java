@@ -1,5 +1,5 @@
 package sortingAlgos;
-public class QuickSort {
+public class BubbleSort {
 
     public static void main(String[] args) {
         int [] arr = {3,6,2,8,4,0};
