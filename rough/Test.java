@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //hashing
 //for numbers
-public class Test1 {
+ class Test1 {
  public static void main(String[] args) {
     int arr[] = new int[5];
     Scanner sc = new Scanner(System.in);
