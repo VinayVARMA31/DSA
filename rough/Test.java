@@ -1,9 +1,14 @@
 package rough;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 //hashing
+//there are limitations doing this type of hashing i.e it can store until 10^7 values
 //for numbers
+//array hashing
  class Test1 {
  public static void main(String[] args) {
     int arr[] = new int[5];
@@ -47,4 +52,33 @@ class Test2 {
        sc.close();
     }
    }
-   
+   //now it's time for doing them using Hashmap
+   class Test3{
+      public static void main(String[] args) {
+         Map<Integer,Integer> map = new HashMap<>();
+         map.put(1, 5);
+         map.put(2, 6);
+         map.put(3, 7);
+         map.put(4, 2);
+         map.put(5, 4);
+
+         //this works for the keys if they are present 
+      //    int [] arr = {1,3,5};
+      //   for (int i = 0; i < arr.length; i++) {
+      //       map.put(arr[i], map.get(arr[i])+1);
+      //   }
+
+       //if there is no key to it will throw null pointer exception so we create a other way
+       int[] arr = {1,3,5,6,22};
+       for (int i = 0; i < arr.length; i++) {
+           // Use getOrDefault() to handle non-existent keys
+           map.put(arr[i], map.getOrDefault(arr[i],0) + 1);
+       }
+        for (Map.Entry m : map.entrySet()) {
+         System.out.println(m.getKey()+":"+m.getValue());
+        }
+        
+     }
+ }
+
+     
