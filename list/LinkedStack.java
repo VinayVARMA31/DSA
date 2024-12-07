@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.EmptyStackException;
 
 class Node1{
